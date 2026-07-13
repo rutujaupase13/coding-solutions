@@ -1,0 +1,41 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int num = sc.nextInt();
+		int count = 0;
+		int num1 = num;
+		
+		while(num > 0)
+		{
+		    int temp = num % 10;
+		    int i = 1;
+		    int power = 1;
+		    
+		    while(i < 4)
+		    {
+		        power = power * temp;
+		        i++;
+		    }
+		    
+		    num = num / 10;
+		    
+		    count = count + power;
+		}
+		
+		
+		if(count == num1)
+		{
+		System.out.println(num1+" is Armstrong number");
+		}
+		
+		else 
+		{
+		    System.out.println(num1+" is not a Armstrong number");
+		}
+		
+	}
+}
